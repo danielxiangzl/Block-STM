@@ -394,7 +394,7 @@ jobs:
           $pre_command && mkdir -p target/junit-reports && mv target/nextest/ci/junit.xml target/junit-reports/unit-test.xml
       - name: upload unit test results
         if: always()
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: unit-test-results
           path: target/junit-reports/unit-test.xml
@@ -434,7 +434,7 @@ jobs:
           $pre_command && mkdir -p target/junit-reports && mv target/nextest/ci/junit.xml target/junit-reports/codegen-unit-test.xml
       - name: upload codegen test results
         if: always()
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: codegen-unit-test-results
           path: target/junit-reports/codegen-unit-test.xml
