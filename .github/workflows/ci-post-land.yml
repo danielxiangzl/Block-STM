@@ -341,7 +341,7 @@ jobs:
       - name: copy API specification doc into target/doc/diem_api
         run : cp api/doc/openapi.yaml target/doc/diem_api/openapi.yaml && cp api/doc/spec.html target/doc/diem_api/spec.html
       - name: Deploy Docs
-        uses: peaceiris/actions-gh-pages@v3.8.0
+        uses: peaceiris/actions-gh-pages@v3.9.2
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
